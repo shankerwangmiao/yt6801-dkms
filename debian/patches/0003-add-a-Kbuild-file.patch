@@ -1,0 +1,18 @@
+From: Miao Wang <shankerwangmiao@gmail.com>
+Date: Sun, 4 Jan 2026 16:32:28 +0800
+Subject: add a Kbuild file
+
+---
+ src/Kbuild | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 src/Kbuild
+
+diff --git a/src/Kbuild b/src/Kbuild
+new file mode 100644
+index 0000000..7b16f0f
+--- /dev/null
++++ b/src/Kbuild
+@@ -0,0 +1,3 @@
++yt6801-objs := fuxi-gmac-common.o fuxi-gmac-desc.o fuxi-gmac-ethtool.o fuxi-gmac-hw.o fuxi-gmac-net.o fuxi-gmac-pci.o fuxi-gmac-phy.o fuxi-efuse.o  fuxi-gmac-ioctl.o
++obj-m += yt6801.o
++ccflags-y += -DFXGMAC_ASPM_ENABLED -DFXGMAC_EPHY_LOOPBACK_DETECT_ENABLED

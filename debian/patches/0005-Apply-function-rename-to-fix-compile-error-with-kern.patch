@@ -1,0 +1,23 @@
+From: Miao Wang <shankerwangmiao@gmail.com>
+Date: Sun, 4 Jan 2026 19:14:45 +0800
+Subject: Apply function rename to fix compile error with kernel 6.1 and older
+
+---
+ src/fuxi-gmac-phy.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/fuxi-gmac-phy.c b/src/fuxi-gmac-phy.c
+index 3e08de5..7d30f1f 100644
+--- a/src/fuxi-gmac-phy.c
++++ b/src/fuxi-gmac-phy.c
+@@ -374,6 +374,10 @@ int fxgmac_phy_timer_init(struct fxgmac_pdata *pdata)
+ 
+ void fxgmac_phy_timer_destroy(struct fxgmac_pdata *pdata)
+ {
++    #if (LINUX_VERSION_CODE >= KERNEL_VERSION(6,2,0))
+     timer_delete_sync(&pdata->expansion.phy_poll_tm);
++    #else
++    del_timer_sync(&pdata->expansion.phy_poll_tm);
++    #endif
+     DPRINTK("fxgmac_phy_timer removed\n");
+ }

@@ -1,0 +1,38 @@
+From: Werner Sembach <wse@tuxedocomputers.com>
+Date: Thu, 12 Jun 2025 14:21:31 +0200
+Subject: Apply function rename to fix compile error with kernel 6.15 and
+ newer
+
+---
+ src/fuxi-gmac-net.c | 4 ++--
+ src/fuxi-gmac-phy.c | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/fuxi-gmac-net.c b/src/fuxi-gmac-net.c
+index 3e643f9..e56f098 100644
+--- a/src/fuxi-gmac-net.c
++++ b/src/fuxi-gmac-net.c
+@@ -869,9 +869,9 @@ static void fxgmac_stop_timers(struct fxgmac_pdata *pdata)
+             if (!channel->tx_ring)
+                 break;
+ 
+-            del_timer_sync(&channel->tx_timer);
++            timer_delete_sync(&channel->tx_timer);
+ #if FXGMAC_TX_HANG_TIMER_ENABLED
+-            del_timer_sync(&channel->tx_hang_timer);
++            timer_delete_sync(&channel->tx_hang_timer);
+             channel->tx_hang_timer_active = 0;
+ #endif
+         }
+diff --git a/src/fuxi-gmac-phy.c b/src/fuxi-gmac-phy.c
+index 36d4fb3..9139067 100644
+--- a/src/fuxi-gmac-phy.c
++++ b/src/fuxi-gmac-phy.c
+@@ -370,6 +370,6 @@ int fxgmac_phy_timer_init(struct fxgmac_pdata *pdata)
+ 
+ void fxgmac_phy_timer_destroy(struct fxgmac_pdata *pdata)
+ {
+-    del_timer_sync(&pdata->expansion.phy_poll_tm);
++    timer_delete_sync(&pdata->expansion.phy_poll_tm);
+     DPRINTK("fxgmac_phy_timer removed\n");
+ }
