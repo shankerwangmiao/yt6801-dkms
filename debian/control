@@ -1,10 +1,8 @@
 Source: yt6801-dkms
 Section: kernel
-Priority: optional
 Maintainer: Miao Wang <shankerwangmiao@gmail.com>
 Build-Depends: debhelper-compat (= 13), dh-sequence-dkms
 Standards-Version: 4.7.2
-Rules-Requires-Root: no
 Homepage: https://en.motor-comm.com/download?kw=&category=592&wd=1&tp=1
 Vcs-Git: https://salsa.debian.org/shankerwangmiao/yt6801-dkms.git
 Vcs-Browser: https://salsa.debian.org/shankerwangmiao/yt6801-dkms
