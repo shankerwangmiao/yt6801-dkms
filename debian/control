@@ -10,9 +10,14 @@ Vcs-Browser: https://salsa.debian.org/shankerwangmiao/yt6801-dkms
 Package: yt6801-dkms
 Architecture: all
 Depends: ${misc:Depends}, dkms
-Description: DKMS package for YT6801 network driver
+Description: DKMS Driver for Motorcomm YT6801 ethernet controller
  This package provides the DKMS source for the YT6801 network driver.
  .
  The YT6801 is a high-performance Ethernet controller designed by
  Motor-comm Corporation, offering advanced networking features and
- reliable connectivity for various applications.
+ reliable connectivity for various applications, which can be found
+ in several Mini PCs and laptops, such as SOYO M2 Mini PC, MLLSE Mini
+ PC series, and Tuxedo laptops.
+ .
+ This package automatically builds and installs the kernel module, if
+ appropriate kernel headers are installed.
