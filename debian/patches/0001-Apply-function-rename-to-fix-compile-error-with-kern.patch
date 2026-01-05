@@ -2,7 +2,7 @@ From: Werner Sembach <wse@tuxedocomputers.com>
 Date: Thu, 12 Jun 2025 14:21:31 +0200
 Subject: Apply function rename to fix compile error with kernel 6.15 and
  newer
-
+Forwarded: not-needed
 ---
  src/fuxi-gmac-net.c | 4 ++--
  src/fuxi-gmac-phy.c | 2 +-

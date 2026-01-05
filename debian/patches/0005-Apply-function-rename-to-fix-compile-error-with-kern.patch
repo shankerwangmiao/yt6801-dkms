@@ -1,7 +1,7 @@
 From: Miao Wang <shankerwangmiao@gmail.com>
 Date: Sun, 4 Jan 2026 19:14:45 +0800
 Subject: Apply function rename to fix compile error with kernel 6.1 and older
-
+Forwarded: not-needed
 ---
  src/fuxi-gmac-phy.c | 4 ++++
  1 file changed, 4 insertions(+)
