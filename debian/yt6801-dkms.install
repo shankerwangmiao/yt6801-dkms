@@ -1,1 +1,1 @@
-src/*.c src/*.h src/Kbuild src/Notice.txt usr/src/yt6801-${env:DEB_VERSION_UPSTREAM}
+src/*.c src/*.h src/Kbuild src/Notice.txt usr/src/yt6801-${env:INSTALL_VERSION}

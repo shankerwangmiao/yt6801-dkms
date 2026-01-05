@@ -9,4 +9,4 @@ include /usr/share/dpkg/pkg-info.mk
 	dh $@
 
 override_dh_install:
-	DEB_VERSION_UPSTREAM=$(DEB_VERSION_UPSTREAM) dh_install
+	INSTALL_VERSION=$(DEB_VERSION_UPSTREAM) dh_install
