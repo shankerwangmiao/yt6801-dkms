@@ -1,4 +1,4 @@
-yt6801-dkms (1.0.31-1) UNRELEASED; urgency=low
+yt6801-dkms (1.0.31-1) unstable; urgency=medium
 
    * Initial release. (Closes: #1124628)
 
