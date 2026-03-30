@@ -1,3 +1,9 @@
+yt6801-dkms (1.0.31-2) UNRELEASED; urgency=medium
+
+   * d/control: Update Vcs-* link (Closes: #1131358)
+
+ -- Miao Wang <shankerwangmiao@gmail.com>  Mon, 30 Mar 2026 22:08:32 +0800
+
 yt6801-dkms (1.0.31-1) unstable; urgency=medium
 
    * Initial release. (Closes: #1124628)
